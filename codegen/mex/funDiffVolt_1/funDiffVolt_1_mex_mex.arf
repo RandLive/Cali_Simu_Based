@@ -1,0 +1,10 @@
+libemlrt.lib
+libcovrt.lib
+libut.lib
+libmwmathutil.lib
+/export:mexFunction
+/export:emlrtMexFcnProperties
+/export:funDiffVolt_1
+/export:funDiffVolt_1_initialize
+/export:funDiffVolt_1_terminate
+/export:funDiffVolt_1_atexit
