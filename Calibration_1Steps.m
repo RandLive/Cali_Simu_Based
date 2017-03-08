@@ -18,7 +18,7 @@ varNum = 500;
 varStartingPoint = 122;
 
 
-searchRangeCoef = 1;   % 0.1mm
+searchRangeCoef = 100;   % 0.1mm
 
 
 %% Synchronize chosen dataset
