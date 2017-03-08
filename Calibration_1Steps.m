@@ -13,7 +13,7 @@ meaVoltage = U_pmm;
 % Difine max iteration number
 varMaxIter = 20000;
 % Difine number of points taken into calculation
-varNum = 100;
+varNum = 500;
 % Difine which point to start with in the dataset
 varStartingPoint = 122;
 
