@@ -27,6 +27,6 @@ searchRangeCoef = 1;
 
 %% Start Search 
 History=SGOPTM();
-save CM
+save PMM
 %% Output result - calibration matrix
 % koord_alle_alle=x;
