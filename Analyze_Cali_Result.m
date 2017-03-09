@@ -4,10 +4,10 @@ load PMM;
 
 CaliTable = History.x;
 % 
-TotalLength = max(length(CaliTable));
-Iterations = max(length(CaliTable))/8;
+% TotalLength = max(length(CaliTable));
+% Iterations = max(length(CaliTable))/8;
 
-TotalLength = 24000;
+TotalLength = 32000;
 Iterations = TotalLength/8;
 
 
@@ -26,7 +26,7 @@ deltaTheta = CaliTable_Separate(:,:,3)/5;
 shiftX = [0.1011	0.0369	-0.0492	-0.3852	-0.1208	-0.4132	-0.0382	-0.2443];
 shiftY = [0.2956	-0.1565	-0.4444	0.3971	0.4929	0.3175	0.1244	0.1419];
 shiftZ = [-0.2684	0.4684	0.3638	0.3123	-0.1747	-0.0577	0.2663	0.1636];
-shiftPhi = [0.0491	0.3687	-0.3103	0.4939	0.3095	-0.2088	0.2121	-0.2074];
+shiftPhi = [0.0504	0.3687	-0.3103	0.4939	0.3095	-0.2088	0.2121	-0.2074];
 shiftTheta = [0.3339	-0.2371	-0.4461	0.0313	-0.3451	-0.3193	-0.1298	-0.0436];
 
 ErrorX=zeros(Iterations,8);
@@ -70,14 +70,14 @@ plot(Error_Orientation_all);hold on;
 %%
 clear;clc;
 
-load MM;
+load DATA_MM;
 
 CaliTable = History.x;
 % 
-TotalLength = max(length(CaliTable)); %#ok<*NASGU>
-Iterations = max(length(CaliTable))/8;
+% TotalLength = max(length(CaliTable)); %#ok<*NASGU>
+% Iterations = max(length(CaliTable))/8;
 
-TotalLength = 24000;
+TotalLength = 32000;
 Iterations = TotalLength/8;
 
 
@@ -140,12 +140,12 @@ plot(Error_Orientation_all);hold on;
 %%
 clear;clc;
 
-load CM;
+load DATA_CM;
 
 CaliTable = History.x;
 
-TotalLength = max(length(CaliTable));
-Iterations = max(length(CaliTable))/8;
+% TotalLength = max(length(CaliTable));
+% Iterations = max(length(CaliTable))/8;
 
 TotalLength = 24000;
 Iterations = TotalLength/8;
