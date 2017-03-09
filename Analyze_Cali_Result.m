@@ -1,14 +1,14 @@
 clear;close;clc;
 
-load PMM;
+load Data_PMM1;
 
 CaliTable = History.x;
 % 
-% TotalLength = max(length(CaliTable));
-% Iterations = max(length(CaliTable))/8;
-
-TotalLength = 32000;
-Iterations = TotalLength/8;
+TotalLength = max(length(CaliTable));
+Iterations = max(length(CaliTable))/8;
+% 
+% TotalLength = 32000;
+% Iterations = TotalLength/8;
 
 
 CaliTable_Separate = zeros(Iterations,8,7);
@@ -26,7 +26,7 @@ deltaTheta = CaliTable_Separate(:,:,3)/5;
 shiftX = [0.1011	0.0369	-0.0492	-0.3852	-0.1208	-0.4132	-0.0382	-0.2443];
 shiftY = [0.2956	-0.1565	-0.4444	0.3971	0.4929	0.3175	0.1244	0.1419];
 shiftZ = [-0.2684	0.4684	0.3638	0.3123	-0.1747	-0.0577	0.2663	0.1636];
-shiftPhi = [0.0504	0.3687	-0.3103	0.4939	0.3095	-0.2088	0.2121	-0.2074];
+shiftPhi = [0.0491	0.3687	-0.3103	0.4939	0.3095	-0.2088	0.2121	-0.2074];
 shiftTheta = [0.3339	-0.2371	-0.4461	0.0313	-0.3451	-0.3193	-0.1298	-0.0436];
 
 ErrorX=zeros(Iterations,8);
@@ -60,11 +60,11 @@ for times_3=1:Iterations
 end
 
 Error_Position_all = sqrt(ErrorX_all.^2+ErrorY_all.^2+ErrorZ_all.^2);
-Error_Orientation_all = sqrt(ErrorPhi_all.^2+ErrorTheta_all.^2);
+Error_Orientation_all =ErrorPhi_all+ErrorTheta_all;
 
-subplot(2,1,1)
+subplot(1,2,1)
 plot(Error_Position_all);hold on;
-subplot(2,1,2)
+subplot(1,2,2)
 plot(Error_Orientation_all);hold on;
 
 %%
@@ -74,11 +74,11 @@ load DATA_MM;
 
 CaliTable = History.x;
 % 
-% TotalLength = max(length(CaliTable)); %#ok<*NASGU>
-% Iterations = max(length(CaliTable))/8;
+TotalLength = max(length(CaliTable)); %#ok<*NASGU>
+Iterations = max(length(CaliTable))/8;
 
-TotalLength = 32000;
-Iterations = TotalLength/8;
+% TotalLength = 32000;
+% Iterations = TotalLength/8;
 
 
 CaliTable_Separate = zeros(Iterations,8,7);
@@ -130,11 +130,11 @@ for times_3=1:Iterations
 end
 
 Error_Position_all = sqrt(ErrorX_all.^2+ErrorY_all.^2+ErrorZ_all.^2);
-Error_Orientation_all = sqrt(ErrorPhi_all.^2+ErrorTheta_all.^2);
+Error_Orientation_all =ErrorPhi_all+ErrorTheta_all;
 
-subplot(2,1,1)
+subplot(1,2,1)
 plot(Error_Position_all);hold on;
-subplot(2,1,2)
+subplot(1,2,2)
 plot(Error_Orientation_all);hold on;
 
 %%
@@ -144,11 +144,11 @@ load DATA_CM;
 
 CaliTable = History.x;
 
-% TotalLength = max(length(CaliTable));
-% Iterations = max(length(CaliTable))/8;
+TotalLength = max(length(CaliTable));
+Iterations = max(length(CaliTable))/8;
 
-TotalLength = 24000;
-Iterations = TotalLength/8;
+% TotalLength = 24000;
+% Iterations = TotalLength/8;
 
 CaliTable_Separate = zeros(Iterations,8,7);
 
@@ -199,10 +199,12 @@ for times_3=1:Iterations
 end
 
 Error_Position_all = sqrt(ErrorX_all.^2+ErrorY_all.^2+ErrorZ_all.^2);
-Error_Orientation_all = sqrt(ErrorPhi_all.^2+ErrorTheta_all.^2);
+Error_Orientation_all =ErrorPhi_all+ErrorTheta_all;
 
-subplot(2,1,1)
-plot(Error_Position_all);hold off;grid on;
-subplot(2,1,2)
-plot(Error_Orientation_all);hold off;grid on;
+subplot(1,2,1)
+plot(Error_Position_all);grid on;
+set(get(gcf,'CurrentAxes'),'FontName','Times New Roman','FontSize',14);xlabel('Number of Iterations');ylabel('Total Position Error (mm)');legend('0.5 mm Range','5 mm Range','50 mm Range');
+subplot(1,2,2)
+plot(Error_Orientation_all);grid on;
+set(get(gcf,'CurrentAxes'),'FontName','Times New Roman','FontSize',14);xlabel('Number of Iterations');ylabel('Total Oriantation Error (Degree)');legend('0.5 Degree Range','5 Degree Range','50 Degree Range');
 
