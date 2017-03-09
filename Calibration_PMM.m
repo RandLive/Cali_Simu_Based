@@ -17,7 +17,7 @@ varNum = 725;
 varStartingPoint = 1;
 
 
-searchRangeCoef = 1;   
+searchRangeCoef = 200;   
 
 
 
