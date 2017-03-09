@@ -15,16 +15,16 @@
 #include "mean.h"
 
 /* Function Definitions */
-real_T mean(const real_T x[3973])
+real_T mean(const real_T x[5205])
 {
   real_T y;
   int32_T k;
   y = x[0];
-  for (k = 0; k < 3972; k++) {
+  for (k = 0; k < 5204; k++) {
     y += x[k + 1];
   }
 
-  y /= 3973.0;
+  y /= 5205.0;
   return y;
 }
 

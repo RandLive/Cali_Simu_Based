@@ -25,7 +25,7 @@
 #include "funDiffVolt_1_types.h"
 
 /* Function Declarations */
-extern real_T mean(const real_T x[3973]);
+extern real_T mean(const real_T x[5205]);
 
 #ifdef __WATCOMC__
 

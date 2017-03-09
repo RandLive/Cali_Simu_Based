@@ -26,7 +26,7 @@ real_T K;
 real_T minVoltage;
 real_T varStartingPoint;
 real_T varNum;
-real_T F[3973];
+real_T F[5205];
 real_T C;
 real_T r[24];
 uint32_T refPose_dirty;
@@ -54,12 +54,12 @@ emlrtContext emlrtContextGlobal = { true,/* bFirstTime */
 
 emlrtRSInfo emlrtRSI = { 30,           /* lineNo */
   "funDiffVolt_1",                     /* fcnName */
-  "C:\\Users\\meli\\Desktop\\Calibration_Simulation_Based_2017\\funDiffVolt_1.m"/* pathName */
+  "C:\\Users\\meli\\Desktop\\Cali_Simu_Based_CM\\funDiffVolt_1.m"/* pathName */
 };
 
 emlrtRSInfo b_emlrtRSI = { 4,          /* lineNo */
   "Bfeld",                             /* fcnName */
-  "C:\\Users\\meli\\Desktop\\Calibration_Simulation_Based_2017\\Bfeld.m"/* pathName */
+  "C:\\Users\\meli\\Desktop\\Cali_Simu_Based_CM\\Bfeld.m"/* pathName */
 };
 
 emlrtRSInfo c_emlrtRSI = { 37,         /* lineNo */

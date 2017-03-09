@@ -3,22 +3,22 @@ close all; clear; clc;
 global varNum varMaxIter refPose meaVoltage varStartingPoint searchRangeCoef  
 
 % load reference position
-load POR_cm; 
+load POR_mm; 
 % load measure voltages
-load U_cm
+load U_mm
 
-refPose = POR_cm;
-meaVoltage = U_cm;
+refPose = POR_mm;
+meaVoltage = U_mm;
 
 % Difine max iteration number
 varMaxIter = 20000;
 % Difine number of points taken into calculation
-varNum = 500;
+varNum = 725;
 % Difine which point to start with in the dataset
-varStartingPoint = 122;
+varStartingPoint = 1;
 
 
-searchRangeCoef = 100;   % 0.1mm
+searchRangeCoef = 1;   % 0.1mm
 
 
 
@@ -28,6 +28,8 @@ searchRangeCoef = 100;   % 0.1mm
 
 %% Start Search 
 History=SGOPTM();
-save CM
+
+save MM
+
 %% Output result - calibration matrix
 % koord_alle_alle=x;

@@ -36,7 +36,7 @@ extern real_T K;
 extern real_T minVoltage;
 extern real_T varStartingPoint;
 extern real_T varNum;
-extern real_T F[3973];
+extern real_T F[5205];
 extern real_T C;
 extern real_T r[24];
 extern uint32_T refPose_dirty;

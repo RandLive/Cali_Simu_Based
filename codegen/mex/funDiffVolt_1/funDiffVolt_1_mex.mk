@@ -1,4 +1,4 @@
-START_DIR = C:\Users\meli\Desktop\CALIBR~2
+START_DIR = C:\Users\meli\Desktop\CALI_S~1
 
 MATLAB_ROOT = C:\PROGRA~1\MATLAB\R2016b
 MAKEFILE = funDiffVolt_1_mex.mk
