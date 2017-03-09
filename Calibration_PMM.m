@@ -3,12 +3,12 @@ close all; clear; clc;
 global varNum varMaxIter refPose meaVoltage varStartingPoint searchRangeCoef  
 
 % load reference position
-load POR_cm; 
+load POR_pmm; 
 % load measure voltages
-load U_cm
+load U_pmm
 
-refPose = POR_cm;
-meaVoltage = U_cm;
+refPose = POR_pmm;
+meaVoltage = U_pmm;
 
 % Difine max iteration number
 varMaxIter = 20000;
