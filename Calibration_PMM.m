@@ -3,9 +3,14 @@ close all; clear; clc;
 global varNum varMaxIter refPose meaVoltage varStartingPoint searchRangeCoef  
 
 % load reference position
-load POR_pmm; 
-% load measure voltages
-load U_pmm
+% load POR_pmm; 
+% % load measure voltages
+% load U_pmm
+
+load PMMUMM
+
+POR_pmm = PMM;
+U_pmm = UMM;
 
 refPose = POR_pmm;
 meaVoltage = U_pmm;
@@ -17,7 +22,7 @@ varNum = 725;
 varStartingPoint = 1;
 
 
-searchRangeCoef = 200;   
+searchRangeCoef = 4;   
 
 
 
@@ -27,6 +32,6 @@ searchRangeCoef = 200;
 
 %% Start Search 
 History=SGOPTM();
-save PMM
+save DATA_PMM
 %% Output result - calibration matrix
 % koord_alle_alle=x;
