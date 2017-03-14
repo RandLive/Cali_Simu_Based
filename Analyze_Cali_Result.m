@@ -63,9 +63,9 @@ Error_Position_all = sqrt(ErrorX_all.^2+ErrorY_all.^2+ErrorZ_all.^2);
 Error_Orientation_all =ErrorPhi_all+ErrorTheta_all;
 
 subplot(1,2,1)
-plot(Error_Position_all);hold on;
+plot(Error_Position_all,'b','LineWidth',1.2);hold on;
 subplot(1,2,2)
-plot(Error_Orientation_all);hold on;
+plot(Error_Orientation_all,'b','LineWidth',1.2);hold on;
 
 %%
 clear;clc;
@@ -133,9 +133,9 @@ Error_Position_all = sqrt(ErrorX_all.^2+ErrorY_all.^2+ErrorZ_all.^2);
 Error_Orientation_all =ErrorPhi_all+ErrorTheta_all;
 
 subplot(1,2,1)
-plot(Error_Position_all);hold on;
+plot(Error_Position_all,'k','LineWidth',1.2);hold on;
 subplot(1,2,2)
-plot(Error_Orientation_all);hold on;
+plot(Error_Orientation_all,'k','LineWidth',1.2);hold on;
 
 %%
 clear;clc;
@@ -202,9 +202,9 @@ Error_Position_all = sqrt(ErrorX_all.^2+ErrorY_all.^2+ErrorZ_all.^2);
 Error_Orientation_all =ErrorPhi_all+ErrorTheta_all;
 
 subplot(1,2,1)
-plot(Error_Position_all);grid on;
+plot(Error_Position_all,'r','LineWidth',1.2);axis([0 2000 0 500]);grid on;
 set(get(gcf,'CurrentAxes'),'FontName','Times New Roman','FontSize',14);xlabel('Number of Iterations');ylabel('Total Position Error (mm)');legend('0.5 mm Range','5 mm Range','50 mm Range');
 subplot(1,2,2)
-plot(Error_Orientation_all);grid on;
+plot(Error_Orientation_all,'r','LineWidth',1.2);axis([0 2000 0 500]);grid on;
 set(get(gcf,'CurrentAxes'),'FontName','Times New Roman','FontSize',14);xlabel('Number of Iterations');ylabel('Total Oriantation Error (Degree)');legend('0.5 Degree Range','5 Degree Range','50 Degree Range');
 
