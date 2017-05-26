@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
-* text=MATLAB
+* text=auto
 
 # Custom for Visual Studio
 *.cs     diff=csharp
@@ -16,4 +16,6 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-*.swift linguist-language=MATLAB
+*.js linguist-language=MATLAB
+*.css linguist-language=MATLAB
+*.html linguist-language=MATLAB
